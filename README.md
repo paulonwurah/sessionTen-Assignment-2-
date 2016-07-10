@@ -15,7 +15,7 @@ mapInput.count()
 
 val reduceFlattenedInput = mapInput.reduce((x,y) => (x+y))
 
-val KeyValue= reduceFlattenedInput.map(x => x + 1)
+val KeyValue= flattenInput.map(x => (x,1))
 
 val reduceKeyValue  = keyValue.reduceByKey((x,y) => (x+y))
 
